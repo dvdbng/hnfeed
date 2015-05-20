@@ -1,6 +1,7 @@
 A better RSS Feed for Hacker News.
 
-# Link
+# Link / Live demo
+http://feeds.feedburner.com/fullhackernews
 
 # Features
 * Inline links to images, videos, tweets, etc.. (Inlines almost all of the 210 services supported by http://embed.ly/ )
