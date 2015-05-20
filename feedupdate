@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd /var/www/hoyga/
+
+echo "Updating hn feed"
+curl -s "http://hoyga.com/hnfeed/hnfeed.php" > "hnfeed.xml"
+

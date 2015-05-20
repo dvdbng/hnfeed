@@ -1,0 +1,3 @@
+#!/bin/bash
+pear install Cache_Lite
+
