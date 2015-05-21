@@ -142,11 +142,8 @@ function get_content_nocache($url){
     if(strpos($mime,"image/")===0){
         return "<img $img_style src='$url'/>";
     }else if(strpos($mime,"text/plain")===0){
-        try{
-            return file_get_contents($url);
-        } catch(Exception $e){
-            return "Can't get content: $e";
-        }
+        $res = get_page($url);
+        return $res[1];
     }else if(strpos($mime,"text/html")===0 || strpos($mime,"application/xhtml+xml")===0 || strpos($mime,"application/xml")===0){
         try{
             $r = get_page($url);
