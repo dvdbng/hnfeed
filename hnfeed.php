@@ -251,6 +251,7 @@ function edit_common($data) {
 }
 
 function get_arg($name, $n) {
+    global $argv;
     if(isset($_GET[$name])) {
         return $_GET[$name];
     }
@@ -260,6 +261,7 @@ function get_arg($name, $n) {
 }
 $minscore = get_arg('ups', 1);
 $minscore = $minscore ? $minscore : 0;
+$items = array();
 
 foreach(get_hn_frontpage() as $i=>$data){
     if($data["points"] > $minscore){
